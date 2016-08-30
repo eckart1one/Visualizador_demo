@@ -45,7 +45,7 @@
 	<script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
 
 	<!-- <script type="text/javascript" src="us-states.js"></script> -->
-  <script type="text/javascript" src="municipio.json"></script>
+  <script type="text/javascript" src="entidad.json"></script>
 	<script type="text/javascript">
   //variable de mapa
 		var map = L.map('map').setView([37.8, -96], 4);
@@ -72,7 +72,7 @@
 
 		info.update = function (props) {
 			this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-				'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+				'<b>' + props.nom_ent + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
 				: 'Hover over a state');
 		};
 		info.addTo(map);
